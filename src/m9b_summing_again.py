@@ -28,17 +28,17 @@ def run_test_sum_powers():
     print('--------------------------------------------------')
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
-    expected = 5
-    answer = sum_powers(3, 2)
+    expected = 3.80826
+    answer = sum_powers(5, -0.3)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 5
-    answer = sum_powers(5, 2)
+    expected = 144.45655
+    answer = sum_powers(100, 0.1)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 5
+    expected = 30
     answer = sum_powers(4, 2)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
@@ -64,15 +64,15 @@ def sum_powers(n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # -------------------------------------------------------------------------
     pwr = 0
-    for k in range(n):
+    for k in range(1, n + 1):
         pwr = pwr + (k ** p)
-        return pwr
+    return pwr
 
 
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_powers_in_range  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -84,8 +84,8 @@ def run_test_sum_powers_in_range():
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
 
-    expected = 5
-    answer = sum_powers_in_range(3, 2, 5)
+    expected = 142.384776
+    answer = sum_powers_in_range(3, 100, .1)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
