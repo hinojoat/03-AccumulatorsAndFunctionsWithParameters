@@ -128,6 +128,8 @@ def print_sequence3():
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
+    for k in range(0, 101):
+        print(k)
 
 
 def draw_circles3():
