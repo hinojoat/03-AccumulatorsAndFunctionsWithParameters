@@ -14,7 +14,7 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    circle_and_rectangle()
 
 def two_circles():
     """
@@ -96,8 +96,6 @@ def circle_and_rectangle():
     circle.fill_color('blue')
     rectangle.outline_color('red')
 
-    circle.attach_to(window)
-    rectangle.attach_to(window)
 
     print('Rectangle point 1 is ', rectangle.p1)
     print('Rectangle point 2 is ', rectangle.p2)
@@ -105,6 +103,9 @@ def circle_and_rectangle():
     radius = circle.getRadius()
     print('Circle radius is ', radius)
     print('Circle radius is ', circle.radius)
+
+    circle.attach_to(window)
+    rectangle.attach_to(window)
 
     window.close_on_mouse_click()
 
@@ -145,9 +146,14 @@ def lines():
     line1.attach_to(window)
     line2.attach_to(window)
 
-    midpoint = line2.Center???????
-    print('The x-coordinate of the midpoint is ', midpoint.y)
-    print('The y-coordinate of the midpoint is ', midpoint.x)
+    midpoint = line2.get_midpoint()
+    print(midpoint)
+    print('The x-coordinate of the midpoint is ', midpoint.x)
+    print('The y-coordinate of the midpoint is ', midpoint.y)
+    window.render()
+    window.close_on_mouse_click()
+
+
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
